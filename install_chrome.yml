@@ -1,5 +1,4 @@
 ---
-- hosts: windows
   tasks:
   - name: Install chrome
     win_chocolatey:
