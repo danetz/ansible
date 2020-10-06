@@ -1,4 +1,5 @@
 ---
+  hosts: all
   tasks:
   - name: Install chrome
     win_chocolatey:
