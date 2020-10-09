@@ -10,3 +10,8 @@
         name: httpd
         enabled: yes
         state: started
+    - name: permit http traffic through the firewall
+      ansible.posix.firewalld:
+        service: http
+        permanent: yes
+        state: enabled
