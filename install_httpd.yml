@@ -17,8 +17,3 @@
         state: enabled
     - name: reload firewalld
       command: firewall-cmd --reload
-    - name: replace string in index.html
-      replace:
-        path: /usr/share/httpd/noindex/index.html.en-US
-        regexp: 'Test Page'
-        replace: 'Vricon'
