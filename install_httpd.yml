@@ -15,3 +15,5 @@
         service: http
         permanent: yes
         state: enabled
+    - name: reload firewalld
+      command: firewall-cmd --reload
