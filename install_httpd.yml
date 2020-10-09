@@ -17,3 +17,8 @@
         state: enabled
     - name: reload firewalld
       command: firewall-cmd --reload
+    - name: Before Ansible 2.3, option 'dest', 'destfile' or 'name' was used instead of 'path'
+      replace:
+        path: /usr/share/httpd/noindex/index.html.en-US
+        regexp: 'Test Page'
+        replace: 'Ansible Test Page'
