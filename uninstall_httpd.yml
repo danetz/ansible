@@ -1,0 +1,19 @@
+---
+- hosts: all
+  tasks:
+    - name: uninstall apache
+      yum: 
+        name: httpd
+        state: absent
+    - name: disable service httpd
+      systemd:
+        name: httpd
+        enabled: no
+        state: stopped
+    - name: block http traffic through the firewall
+      firewalld:
+        service: http
+        permanent: yes
+        state: absent
+    - name: reload firewalld
+      command: firewall-cmd --reload
