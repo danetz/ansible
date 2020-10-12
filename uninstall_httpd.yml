@@ -12,6 +12,7 @@
         state: stopped
     - name: block http traffic through the firewall
       firewalld:
+        zone: public
         service: http
         permanent: yes
         state: absent
