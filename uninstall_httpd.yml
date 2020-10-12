@@ -12,8 +12,8 @@
         state: stopped
     - name: block http traffic through the firewall
       firewalld:
-        zone: public
         service: http
-        state: absent
+        permanent: yes
+        state: disabled
     - name: reload firewalld
       command: firewall-cmd --reload
