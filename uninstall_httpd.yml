@@ -14,7 +14,6 @@
       firewalld:
         zone: public
         service: http
-        permanent: yes
         state: absent
     - name: reload firewalld
       command: firewall-cmd --reload
