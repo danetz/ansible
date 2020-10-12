@@ -6,6 +6,7 @@
         name: httpd
         state: absent
     - name: disable service httpd
+      ignore_errors: yes
       systemd:
         name: httpd
         enabled: no
